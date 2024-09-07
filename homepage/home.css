@@ -111,13 +111,29 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-.home{
+/* .home{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
     background-color: white;
+} */
+
+.home {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    gap: 8rem;
+    background-color: white;
+    background-image: url('img/bck.jpg');
+    background-size: cover;
+    background-position: center;
 }
+
+.home-content {
+    margin-left: 50px; /* Moves the element 50px from the left */
+}
+
 
 .home .home-content h1{
     font-size: 6rem;
