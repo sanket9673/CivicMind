@@ -18,7 +18,7 @@ const submit = document.getElementById('register');
 submit.addEventListener("click", function (event) {
     event.preventDefault();
 
-    
+    const name = document.getElementById('Name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
@@ -26,6 +26,7 @@ submit.addEventListener("click", function (event) {
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
+            localStorage.setItem('userName', name);
             // Signed up 
             const user = userCredential.user;
             alert("User created successfully!");
