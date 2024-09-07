@@ -63,7 +63,16 @@
         <main>
             <div class="header">
                 <div class="left">
-                    <h1>Dashboard</h1>
+                    <h1 id="greeting">Hi, Guest</h1>
+
+    <script>
+        // Retrieve the user's name from local storage
+        const name = localStorage.getItem('userName');
+        
+        if (name) {
+            document.getElementById('greeting').textContent = `Hi, ${name}`;
+        }
+    </script>
                     
                 </div>
                 <a href="#" class="report">
