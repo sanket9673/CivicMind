@@ -648,10 +648,7 @@ body{
     margin-top: 24px;
 }
 
-/* Specific styles for individual content sections */
-#dashboard-content {
-    /* You can add specific styles for the dashboard here if needed */
-}
+
 
 /* Optional: Override styles for specific sections */
 #about-content h1,
