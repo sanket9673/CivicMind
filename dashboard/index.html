@@ -18,16 +18,14 @@
             <div class="logo-name"><span>Civic</span>Mind</div>
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
-            <li><a href="#"><i class='bx bx-group'></i>About Us</a></li>
-            <li ><a href="#"><i class='bx bxs-phone-call'></i>Contact</a></li>
-            
-            <li><a href="#"><i class='bx bx-group'></i>Profile</a></li>
-            
+            <li class="active"><a href="#" data-content="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="#" data-content="about"><i class='bx bx-group'></i>About Us</a></li>
+            <li><a href="#" data-content="contact"><i class='bx bxs-phone-call'></i>Contact</a></li>
+            <li><a href="#" data-content="profile"><i class='bx bx-group'></i>Profile</a></li>
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="../SIGNUP/signup.html" class="logout">
+                <a href="../homepage/home.html" class="logout">
                     <i class='bx bx-log-out-circle'></i>
                     Logout
                 </a>
@@ -54,146 +52,99 @@
                 <span class="count">12</span>
             </a>
             <a href="#" class="profile">
-                <img src="images/logo.png">
+                <img src="../homepage/img/profile-removebg-preview.png">
             </a>
         </nav>
-
         <!-- End of Navbar -->
 
         <main>
-            <div class="header">
-                <div class="left">
-                    <h1>Dashboard</h1>
-                    
+            <div id="dashboard-content" class="content-section">
+                <div class="header">
+                    <div class="left">
+                        <h1>Dashboard</h1>
+                    </div>
                 </div>
-                <a href="#" class="report">
-                    <i class='bx bx-cloud-download'></i>
-                    <span>Download CSV</span>
-                </a>
+    
+                <!-- Insights -->
+                <ul class="insights">
+                    <li>
+                        <i class='bx bx-calendar-check'></i>
+                        <span class="info">
+                            <h3>1</h3>
+                            <p>Courses completed</p>
+                        </span>
+                    </li>
+                    <li>
+                        <i class='bx bx-show-alt'></i>
+                        <span class="info">
+                            <h3>3</h3>
+                            <p>Courses left</p>
+                        </span>
+                    </li>
+                    <li>
+                        <i class='bx bx-line-chart'></i>
+                        <span class="info">
+                            <h3>14,721</h3>
+                            <p>Searches</p>
+                        </span>
+                    </li>
+                    <li>
+                        <i class='bx bx-dollar-circle'></i>
+                        <span class="info">
+                            <h3>$6,742</h3>
+                            <p>Total Sales</p>
+                        </span>
+                    </li>
+                </ul>
+                <!-- End of Insights -->
             </div>
 
-            <!-- Insights -->
-            <ul class="insights">
-                <li>
-                    <i class='bx bx-calendar-check'></i>
-                    <span class="info">
-                        <h3>
-                            1
-                        </h3>
-                        <p>Courses completed</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-show-alt'></i>
-                    <span class="info">
-                        <h3>
-                            3
-                        </h3>
-                        <p>Courses left</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-line-chart'></i>
-                    <span class="info">
-                        <h3>
-                            14,721
-                        </h3>
-                        <p>Searches</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-dollar-circle'></i>
-                    <span class="info">
-                        <h3>
-                            $6,742
-                        </h3>
-                        <p>Total Sales</p>
-                    </span>
-                </li>
-            </ul>
-            <!-- End of Insights -->
-
-            <div class="bottom-data">
-                <div class="orders">
-                    <div class="header">
-                        <i class='bx bx-receipt'></i>
-                        <h3>Recent Orders</h3>
-                        <i class='bx bx-filter'></i>
-                        <i class='bx bx-search'></i>
+            <div id="about-content" class="content-section" style="display: none;">
+                <h1>About Us</h1>
+                <p>Welcome to CivicMind! </p>
+                <p>
+                    We're passionate about making learning the Constitution both engaging and accessible. Our interactive web application is designed to break down the complexities of the Constitution into easy-to-understand segments. Explore the core principles of democracy through simplified readings and fun quizzes. 
+                    Track your progress and celebrate your achievements as you enhance your understanding of this foundational document. Join us on this journey to make constitutional knowledge a breeze!
+                </p>
+                <div class="team">
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 1">
+                        <h3>Anurag Iyer</h3>
                     </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Order Date</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
-                                </td>
-                                <td>14-08-2023</td>
-                                <td><span class="status completed">Completed</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
-                                </td>
-                                <td>14-08-2023</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
-                                </td>
-                                <td>14-08-2023</td>
-                                <td><span class="status process">Processing</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Reminders -->
-                <div class="reminders">
-                    <div class="header">
-                        <i class='bx bx-note'></i>
-                        <h3>Remiders</h3>
-                        <i class='bx bx-filter'></i>
-                        <i class='bx bx-plus'></i>
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 2">
+                        <h3>Sanket Kisan Chavhan</h3>
                     </div>
-                    <ul class="task-list">
-                        <li class="completed">
-                            <div class="task-title">
-                                <i class='bx bx-check-circle'></i>
-                                <p>Start Our Meeting</p>
-                            </div>
-                            <i class='bx bx-dots-vertical-rounded'></i>
-                        </li>
-                        <li class="completed">
-                            <div class="task-title">
-                                <i class='bx bx-check-circle'></i>
-                                <p>Analyse Our Site</p>
-                            </div>
-                            <i class='bx bx-dots-vertical-rounded'></i>
-                        </li>
-                        <li class="not-completed">
-                            <div class="task-title">
-                                <i class='bx bx-x-circle'></i>
-                                <p>Play Footbal</p>
-                            </div>
-                            <i class='bx bx-dots-vertical-rounded'></i>
-                        </li>
-                    </ul>
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 3">
+                        <h3>Himank Khare</h3>
+                    </div>
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 4">
+                        <h3>Lokesh Chakka</h3>
+                    </div>
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 5">
+                        <h3>Pranav Gupta</h3>
+                    </div>
+                    <div class="member">
+                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 6">
+                        <h3>Nidhi Jha</h3>
+                    </div>
+                    <!-- Add more team members as needed -->
                 </div>
-
-                <!-- End of Reminders-->
-
             </div>
 
+            <div id="contact-content" class="content-section" style="display: none;">
+                <h2>Contact</h2>
+                <p>Contact us at contact@civicmind.com.</p>
+            </div>
+
+            <div id="profile-content" class="content-section" style="display: none;">
+                <h2>Profile</h2>
+                <p>Your profile information goes here.</p>
+            </div>
         </main>
-
     </div>
 
     <script src="script.js"></script>

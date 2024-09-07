@@ -638,3 +638,94 @@ body{
     }
 
 }
+
+
+/* Apply general styling to all content sections */
+.content-section {
+    padding: 36px 24px;
+    background: var(--light);
+    border-radius: 20px;
+    margin-top: 24px;
+}
+
+/* Specific styles for individual content sections */
+#dashboard-content {
+    /* You can add specific styles for the dashboard here if needed */
+}
+
+/* Optional: Override styles for specific sections */
+#about-content h1,
+#contact-content h2,
+#profile-content h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+#about-content p,
+#contact-content p,
+#profile-content p {
+    color: var(--dark);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Style the team section in About Us */
+#about-content .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#about-content .member {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+#about-content .member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#about-content .member h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--dark);
+}
+
+#about-content .member p {
+    color: var(--dark-grey);
+}
+
+/* Styling for Contact section (if needed) */
+#contact-content h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+#contact-content p {
+    font-size: 16px;
+    color: var(--dark);
+    margin-top: 10px;
+}
+
+/* Styling for Profile section (if needed) */
+#profile-content h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+#profile-content p {
+    font-size: 16px;
+    color: var(--dark);
+    margin-top: 10px;
+}
+
