@@ -1,0 +1,355 @@
+/* General styling */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#progress-bar {
+    height: 10px;
+    background-color: #1976d2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.choice {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
+    background-color: #ddd;
+}
+
+.choice.selected {
+    background-color: #1976d2;
+    color: white;
+}
+
+#next-button {
+    padding: 10px 35px;
+    font-size: 16px;
+    color: white;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;    
+}
+
+#result-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#result {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4566d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #4566d4;
+}
+
+/* Solution container */
+#choices {
+    margin-top: 1px; /* Adds space above the solution section */
+    padding: 10px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    max-height: 600px; /* Set a maximum height to prevent overflow issues */
+}
+
+/* Individual solution styling */
+.solution {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+}
+
+.solution p {
+    margin: 5px 0;
+}
+/* Container for navigation buttons */
+.button-container {
+    display: flex; /* Align buttons in a row */
+    justify-content: space-between; /* Space out the buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3f7973;
+}
+
+/* Disable button styling */
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient effect for Previous button */
+#previous-button {
+    background-color: #1976d2;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-position: right center;
+}
+
+/* Disabled button styling */
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Container styling */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Progress bar */
+#progress-bar {
+    height: 10px;
+    background-color: #1976d2;
+    margin-bottom: 20px;
+}
+
+/* Question styling */
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Choices list styling */
+#choices {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Choices item styling */
+.choice {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.choice.selected {
+    background-color: #1976d2;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient effect for Previous button */
+#previous-button {
+    background-color: #1976d2;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+/* Gradient effect for Submit button */
+#submit-button {
+    background-color: #007bff; /* Blue color */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-position: right center;
+}
+
+/* Disabled button styling */
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Result container styling */
+#result-container {
+    margin-top: 20px;
+}
+
+/* Solution styling */
+.solution {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.solution p {
+    margin: 5px 0;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient effect for Previous button */
+#previous-button {
+   background-color: #1976d2;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+/* Gradient effect for Next button */
+#next-button {
+    background-color: #1976d2;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+/* Styling for the Submit button */
+#submit-button {
+    background-color: #007bff; /* Blue color */
+}
+
+/* Styling for the Show Solution button */
+#show-solution-button {
+    background-color: #1976d2;
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-position: right center;
+}
+
+/* Disabled button styling */
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Result container styling */
+#result-container {
+    margin-top: 20px;
+}
+
+/* Solution styling */
+.solution {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.solution p {
+    margin: 5px 0;
+}

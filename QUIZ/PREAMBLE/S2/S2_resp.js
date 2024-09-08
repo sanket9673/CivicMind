@@ -1,31 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDoG5BxEgTgDE2regx3LvIGPwq2cdLPXb4",
-    authDomain: "newconnect-26b26.firebaseapp.com",
-    projectId: "newconnect-26b26",
-    storageBucket: "newconnect-26b26.appspot.com",
-    messagingSenderId: "164407708826",
-    appId: "1:164407708826:web:701d4a9ed960a99c34a323"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-let userId = null;
-
-onAuthStateChanged(auth, user => {
-    if (user) {
-        userId = user.uid; // Get the logged-in user's ID
-    } else {
-        // No user is signed in, redirect to login page
-        window.location.href = "../SIGNUP/signup.html";
-    }
-});
-
 const questionElement = document.getElementById('question');
 const choicesElement = document.getElementById('choices');
 const nextButton = document.getElementById('next-button');
@@ -44,33 +16,63 @@ let selectedQuestions = [];
 
 // Example pool of questions
 const questionPool = [
-    { question: "What is the capital of France?", choices: ["Berlin", "Madrid", "Paris", "Rome"], correctAnswer: 2 },
-    { question: "Which planet is known as the Red Planet?", choices: ["Earth", "Mars", "Jupiter", "Saturn"], correctAnswer: 1 },
-    { question: "What is the largest ocean on Earth?", choices: ["Atlantic", "Indian", "Arctic", "Pacific"], correctAnswer: 3 },
-    { question: "Which country is known as the Land of the Rising Sun?", choices: ["China", "Japan", "Thailand", "India"], correctAnswer: 1 },
-    { question: "What is the currency of the United States?", choices: ["Euro", "Dollar", "Pound", "Yen"], correctAnswer: 1 },
-    { question: "What is the tallest mountain in the world?", choices: ["K2", "Everest", "Kangchenjunga", "Lhotse"], correctAnswer: 1 },
-    { question: "Who wrote 'Romeo and Juliet'?", choices: ["Shakespeare", "Hemingway", "Dickens", "Twain"], correctAnswer: 0 },
-    { question: "Which element has the chemical symbol 'O'?", choices: ["Oxygen", "Gold", "Osmium", "Oganesson"], correctAnswer: 0 },
-    { question: "In which year did the Titanic sink?", choices: ["1902", "1912", "1922", "1932"], correctAnswer: 1 },
-    { question: "What is the smallest country in the world?", choices: ["Monaco", "San Marino", "Vatican City", "Liechtenstein"], correctAnswer: 2 },
-    { question: "Which planet is closest to the Sun?", choices: ["Venus", "Mars", "Mercury", "Earth"], correctAnswer: 2 },
-    { question: "Which continent is the largest by area?", choices: ["Africa", "Asia", "North America", "Europe"], correctAnswer: 1 },
-    { question: "What is the main ingredient in guacamole?", choices: ["Tomato", "Onion", "Avocado", "Cucumber"], correctAnswer: 2 },
-    { question: "Who painted the Mona Lisa?", choices: ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"], correctAnswer: 1 },
-    { question: "Which planet has the most moons?", choices: ["Jupiter", "Saturn", "Uranus", "Neptune"], correctAnswer: 0 },
-    { question: "What is the chemical symbol for water?", choices: ["HO", "O2", "CO2", "H2O"], correctAnswer: 3 },
-    { question: "Which is the longest river in the world?", choices: ["Nile", "Amazon", "Yangtze", "Mississippi"], correctAnswer: 1 },
-    { question: "Who was the first man to walk on the Moon?", choices: ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "John Glenn"], correctAnswer: 1 },
-    { question: "Which organ is primarily responsible for pumping blood?", choices: ["Liver", "Brain", "Heart", "Lungs"], correctAnswer: 2 },
-    { question: "What is the capital of Australia?", choices: ["Sydney", "Melbourne", "Canberra", "Perth"], correctAnswer: 2 },
-    // Add your questions here
+    {
+        question: "If your social media post is censored by authorities, which part of the Preamble protects your right to express your thoughts?",
+        choices: ["Justice", "Liberty", "Equality", "Fraternity"],
+        correctAnswer: 1 // Index for "Liberty"
+    },
+    {
+        question: "Your workplace restricts you from practicing your religion during work hours. Which principle from the Preamble ensures your freedom to worship?",
+        choices: ["Secularism", "Fraternity", "Liberty", "Justice"],
+        correctAnswer: 2 // Index for "Liberty"
+    },
+    {
+        question: "You are told not to express certain political opinions in public. Which principle can defend your right to freely share your political views?",
+        choices: ["Equality", "Liberty", "Secularism", "Fraternity"],
+        correctAnswer: 1 // Index for "Liberty"
+    },
+    {
+        question: "You wish to write an article critical of the government, but are discouraged from doing so. What principle protects your freedom of expression?",
+        choices: ["Liberty", "Fraternity", "Justice", "Equality"],
+        correctAnswer: 0 // Index for "Liberty"
+    },
+    {
+        question: "If you are not allowed to discuss certain topics in public because of your beliefs, which part of the Preamble protects your freedom of thought?",
+        choices: ["Justice", "Secularism", "Liberty", "Equality"],
+        correctAnswer: 2 // Index for "Liberty"
+    },
+    {
+        question: "If your workplace restricts you from practicing your religion, which Article guarantees your freedom of religion?",
+        choices: ["Article 19", "Article 14", "Article 25", "Article 21"],
+        correctAnswer: 2 // Index for "Article 25"
+    },
+    {
+        question: "You are prevented from expressing your opinion on social media. Which Article protects your right to freedom of speech?",
+        choices: ["Article 19", "Article 14", "Article 25", "Article 21"],
+        correctAnswer: 0 // Index for "Article 19"
+    },
+    {
+        question: "Your school tries to force students to follow a particular religion. Which Article can be invoked to protect your right to choose your faith?",
+        choices: ["Article 14", "Article 25", "Article 21", "Article 19"],
+        correctAnswer: 1 // Index for "Article 25"
+    },
+    {
+        question: "If you wish to write a newspaper article criticizing the government but fear repercussions, which Article protects your right to do so?",
+        choices: ["Article 19", "Article 14", "Article 21", "Article 25"],
+        correctAnswer: 0 // Index for "Article 19"
+    },
+    {
+        question: "If a public office refuses to serve you because of your religious beliefs, which Article ensures you can challenge this unfair treatment?",
+        choices: ["Article 25", "Article 21", "Article 19", "Article 14"],
+        correctAnswer: 0 // Index for "Article 25"
+    }
 ];
+
 
 function selectRandomQuestions() {
     selectedQuestions = [];
     const indices = [];
-    while (selectedQuestions.length < 10) {
+    while (selectedQuestions.length < 5) {
         const randomIndex = Math.floor(Math.random() * questionPool.length);
         if (!indices.includes(randomIndex)) {
             indices.push(randomIndex);
@@ -127,25 +129,21 @@ function showResults() {
     previousButton.style.display = 'none';
     submitButton.style.display = 'none';
 
+    // Ensure solutionButton is appended and visible
     solutionButton.textContent = "Show Solutions";
     solutionButton.id = 'show-solution-button'; // Assign the button ID for styling
     solutionButton.classList.add('btn'); // Add common button class
     solutionButton.style.display = 'block';
     solutionButton.style.margin = '0 auto';
-    saveScore(score);
-
-    
 
     // Append the score and solution button to the result container
     resultContainer.appendChild(resultElement);
     resultContainer.appendChild(solutionButton);
-    
 
     // Add the event listener for showing solutions
     solutionButton.addEventListener('click', showSolutions);
-
-    
 }
+
 
 function showSolutions() {
     questionElement.textContent = "Solutions:";
@@ -195,20 +193,7 @@ function handleSubmit() {
     showResults();
 }
 
-function saveScore(score) {
-    if (userId) {
-      setDoc(doc(db, 'quizScores', userId), {
-        score: score,
-        date: new Date()
-      }).then(() => {
-        console.log("Score saved successfully!");
-      }).catch(error => {
-        console.error("Error saving score: ", error);
-      });
-    } else {
-      console.error("No user ID found, cannot save score.");
-    }
-  }
+
 
 nextButton.addEventListener('click', () => handleNavigation('next'));
 previousButton.addEventListener('click', () => handleNavigation('previous'));

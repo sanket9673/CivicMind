@@ -445,12 +445,6 @@ body{
 .content main .insights li .info p{
     color: var(--dark);
 }
-
-
-
-
-
-
 /* New styles for dashboard sections */
 .dashboard-content {
     margin-bottom: 20px;
