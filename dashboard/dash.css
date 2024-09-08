@@ -23,15 +23,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 .bx{
     font-size: 1.7rem;
 }
@@ -52,6 +43,16 @@ body.dark{
     --light: #181a1e;
     --grey: #25252c;
     --dark: #fbfbfb
+}
+
+/* Default (light) theme logo */
+.l {
+    content: url('../homepage/img/logo.png');
+}
+
+/* Dark theme logo */
+body.dark .l {
+    content: url('../homepage/img/bg-removebg-preview.png'); /* Replace with your dark mode logo image path */
 }
 
 body{
