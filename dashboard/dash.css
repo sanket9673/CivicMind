@@ -55,6 +55,22 @@ body.dark .l {
     content: url('../homepage/img/bg-removebg-preview.png'); /* Replace with your dark mode logo image path */
 }
 
+
+
+
+.locked {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+
+
+
+
+
+
+
+
 body{
     background: var(--grey);
     overflow-x: hidden;
