@@ -214,7 +214,7 @@ span{
 }
 
 .btn:hover{
-    transform: scale3d(1.03);
+    transform: scale(1.1);
     background-color: #237dd7;
     color: black;
     box-shadow: 0 0 25px #237dd7;
