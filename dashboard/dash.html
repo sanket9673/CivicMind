@@ -1,271 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="dash.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dash.css" />
     <title>Your Dashboard</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#" class="logo">
-            <img src="../homepage/img/logo.png" alt="logo" class="l">
-            <div class="logo-name"><span>Civic</span>Mind</div>
-        </a>
-        <ul class="side-menu">
-            <li class="active"><a href="#" data-content="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
-            <li><a href="#" data-content="about"><i class='bx bx-group'></i>About Us</a></li>
-            <li><a href="#" data-content="contact"><i class='bx bxs-phone-call'></i>Contact</a></li>
-            <li><a href="#" data-content="profile"><i class='bx bx-group'></i>Profile</a></li>
-        </ul>
-        <ul class="side-menu">
-            <li>
-                <a href="../homepage/home.html" class="logout">
-                    <i class='bx bx-log-out-circle'></i>
-                    Logout
-                </a>
-            </li>
-        </ul>
+      <a href="#" class="logo">
+        <img src="../homepage/img/logo.png" alt="logo" class="l" />
+        <div class="logo-name"><span>Civic</span>Mind</div>
+      </a>
+      <ul class="side-menu">
+        <li class="active">
+          <a href="#" data-content="dashboard"
+            ><i class="bx bxs-dashboard"></i>Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="#" data-content="about"
+            ><i class="bx bx-group"></i>About Us</a
+          >
+        </li>
+        <li>
+          <a href="#" data-content="contact"
+            ><i class="bx bxs-phone-call"></i>Contact</a
+          >
+        </li>
+        <li>
+          <a href="#" data-content="profile"
+            ><i class="bx bx-group"></i>Profile</a
+          >
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="../homepage/home.html" class="logout">
+            <i class="bx bx-log-out-circle"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
     </div>
     <!-- End of Sidebar -->
 
     <!-- Main Content -->
     <div class="content">
-        <!-- Navbar -->
-        <nav>
-            <i class='bx bx-menu'></i>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Search...">
-                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
-                </div>
-            </form>
-            <input type="checkbox" id="theme-toggle" hidden>
-            <label for="theme-toggle" class="theme-toggle"></label>
-            <a href="#" class="notif">
-                <i class='bx bx-bell'></i>
-                <span class="count">12</span>
-            </a>
-            <a href="#" class="profile">
-                <img src="../homepage/img/profile-removebg-preview.png">
-            </a>
-        </nav>
-        <!-- End of Navbar -->
+      <!-- Navbar -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button class="search-btn" type="submit">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <input type="checkbox" id="theme-toggle" hidden />
+        <label for="theme-toggle" class="theme-toggle"></label>
+        <a href="#" class="notif">
+          <i class="bx bx-bell"></i>
+          <span class="count">12</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="../homepage/img/profile-removebg-preview.png" />
+        </a>
+      </nav>
+      <!-- End of Navbar -->
 
-
-
-
-        <main>
-            <!-- Dashboard Content -->
-<div id="dashboard-content" class="content-section dashboard-content">
-    <div class="header">
-        <div class="left">
-            <h1 id="greeting">Hi, Guest</h1>
-            <script>
+      <main>
+        <!-- Dashboard Content -->
+        <div id="dashboard-content" class="content-section dashboard-content">
+          <div class="header">
+            <div class="left">
+              <h1 id="greeting">Hi, Guest</h1>
+              <script>
                 // Retrieve the user's name from local storage
-                const name = localStorage.getItem('userName');
-                
+                const name = localStorage.getItem("userName");
+
                 if (name) {
-                    document.getElementById('greeting').textContent = `Hi, ${name}`;
+                  document.getElementById(
+                    "greeting"
+                  ).textContent = `Hi, ${name}`;
                 }
-            </script>
-        </div>
-    </div>
-    <!-- Insights -->
-    <ul class="insights">
-        <li>
-            <i class='bx bx-calendar-check'></i>
-            <span class="info">
+              </script>
+            </div>
+          </div>
+          <!-- Insights -->
+          <ul class="insights">
+            <li>
+              <i class="bx bx-calendar-check"></i>
+              <span class="info">
                 <h3>1</h3>
                 <p>Courses completed</p>
-            </span>
-        </li>
-        <li>
-            <i class='bx bx-show-alt'></i>
-            <span class="info">
+              </span>
+            </li>
+            <li>
+              <i class="bx bx-show-alt"></i>
+              <span class="info">
                 <h3>3</h3>
                 <p>Courses left</p>
-            </span>
-        </li>
-        <li>
-            <i class='bx bx-line-chart'></i>
-            <span class="info">
+              </span>
+            </li>
+            <li>
+              <i class="bx bx-line-chart"></i>
+              <span class="info">
                 <h3>14,721</h3>
                 <p>Searches</p>
-            </span>
-        </li>
-        <li>
-            <i class='bx bx-dollar-circle'></i>
-            <span class="info">
+              </span>
+            </li>
+            <li>
+              <i class="bx bx-dollar-circle"></i>
+              <span class="info">
                 <h3>$6,742</h3>
                 <p>Total Sales</p>
-            </span>
-        </li>
-    </ul>
-    <!-- End of Insights -->
+              </span>
+            </li>
+          </ul>
+          <!-- End of Insights -->
 
-    <!-- Dashboard Sections -->
-    <div class="dashboard-sections">
-        <!-- Row 1 -->
-        <div class="section-row">
-            <div class="section" id="preamble">
+          <!-- Dashboard Sections -->
+          <div class="dashboard-sections">
+            <!-- Row 1 -->
+            <div class="section-row">
+              <div class="section" id="preamble">
                 <h2>PREAMBLE</h2>
-            </div>
-            <script>
-                document.getElementById('preamble').addEventListener('click',function(){
-                    window.location.href = '../content/preamble.html' ;
-                })
-            </script>
+              </div>
+              <script>
+                document
+                  .getElementById("preamble")
+                  .addEventListener("click", function () {
+                    window.location.href = "../content/preamble.html";
+                  });
+              </script>
 
-            <div class="section" id="fundamental-rights">
+              <div class="section" id="fundamental-rights">
                 <h2>FUNDAMENTAL RIGHTS</h2>
+              </div>
             </div>
-        </div>
-        <!-- Row 2 -->
-        <div class="section-row">
-            <div class="section" id="section-3">
+            <!-- Row 2 -->
+            <div class="section-row">
+              <div class="section" id="directive-principles">
                 <h2>DIRECTIVE PRINCIPLES OF STATE POLICIES</h2>
-            </div>
-            <div class="section" id="section-4">
+              </div>
+              <div class="section" id="fundamental-duties">
                 <h2>FUNDAMENTAL DUTIES</h2>
+              </div>
             </div>
-        </div>
-        <!-- Row 3 -->
-        <div class="section-row">
-            <div class="section" id="section-5">
-                <h2>STR</h2>
+            <!-- Row 3 -->
+            <div class="section-row">
+              <div class="section" id="section-5">
+                <h2>STRUCTURE OF THE GOVERNMENT</h2>
+              </div>
+              <div class="section" id="section-6">
+                <h2>UNION AND STATE LEGISLATIVE</h2>
+              </div>
             </div>
-            <div class="section" id="section-6">
-                <h2>THE STATES</h2>
+            <!-- Row 4 -->
+            <div class="section-row">
+              <div class="section" id="section-7">
+                <h2>UNION AND STATE EXECUTIVE</h2>
+              </div>
+              <div class="section" id="section-8">
+                <h2>JUDICIARY</h2>
+              </div>
             </div>
-        </div>
-        <!-- Row 4 -->
-        <div class="section-row">
-            <div class="section" id="section-7">
-                <h2>THE UNION TERRITORIES</h2>
+            <!-- Row 5 -->
+            <div class="section-row">
+              <div class="section" id="section-9">
+                <h2>EMERGENCY PROVISIONS</h2>
+              </div>
+              <div class="section" id="section-10">
+                <h2>AMENDMENT OF CONSTITUTION</h2>
+              </div>
             </div>
-            <div class="section" id="section-8">
-                <h2>AMENDMENT OF THE CONSTITUTION</h2>
+            <!-- Row 6 -->
+            <div class="section-row">
+              <div class="section" id="section-11">
+                <h2>FEDRAL STRUCTURE</h2>
+              </div>
+              <div class="section" id="section-12">
+                <h2>ELECTION PROCESS</h2>
+              </div>
             </div>
-        </div>
-        <!-- Row 5 -->
-        <div class="section-row">
-            <div class="section" id="section-9">
-                <h2>ORDERS AND DIRECTIONS</h2>
-            </div>
-            <div class="section" id="section-10">
+            <!-- Row 7 -->
+            <div class="section-row">
+              <div class="section" id="section-13">
+                <h2>SCHEDULES OF CONSTITUTION</h2>
+              </div>
+              <div class="section" id="section-14">
                 <h2>MISCELLANEOUS</h2>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Row 6 -->
-        <div class="section-row">
-            <div class="section" id="section-11">
-                <h2>NEW SECTION 1</h2>
+
+        <!-- Other Content Sections -->
+        <div id="about-content" class="content-section" style="display: none">
+          <h1>About Us</h1>
+          <p>Welcome to CivicMind!</p>
+          <p>
+            We're passionate about making learning the Constitution both
+            engaging and accessible. Our interactive web application is designed
+            to break down the complexities of the Constitution into
+            easy-to-understand segments and make people aware by giving
+            case-based situation. Explore the core principles of democracy
+            through simplified readings and fun quizzes. Track your progress and
+            celebrate your achievements as you enhance your understanding of
+            this foundational document. Join us on this journey to make
+            constitutional knowledge a breeze!
+          </p>
+          <div class="team">
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 1"
+              />
+              <h3>Anurag Iyer</h3>
             </div>
-            <div class="section" id="section-12">
-                <h2>NEW SECTION 2</h2>
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 2"
+              />
+              <h3>Sanket Kisan Chavhan</h3>
             </div>
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 3"
+              />
+              <h3>Himank Khare</h3>
+            </div>
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 4"
+              />
+              <h3>Lokesh Chakka</h3>
+            </div>
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 5"
+              />
+              <h3>Pranav Gupta</h3>
+            </div>
+            <div class="member">
+              <img
+                src="../homepage/img/profile-removebg-preview.png"
+                alt="Team Member 6"
+              />
+              <h3>Nidhi Jha</h3>
+            </div>
+            <!-- Add more team members as needed -->
+          </div>
         </div>
-        <!-- Row 7 -->
-        <div class="section-row">
-            <div class="section" id="section-13">
-                <h2>NEW SECTION 3</h2>
-            </div>
-            <div class="section" id="section-14">
-                <h2>NEW SECTION 4</h2>
-            </div>
+
+        <div id="contact-content" class="content-section" style="display: none">
+          <h2>Contact</h2>
+          <p>Contact us at contact@civicmind.com.</p>
         </div>
-        <!-- Row 8 -->
-        <div class="section-row">
-            <div class="section" id="section-15">
-                <h2>NEW SECTION 5</h2>
-            </div>
-            <div class="section" id="section-16">
-                <h2>NEW SECTION 6</h2>
-            </div>
+
+        <div id="profile-content" class="content-section" style="display: none">
+          <h2>Profile</h2>
+          <p>Your profile information goes here.</p>
         </div>
-        <!-- Row 9 -->
-        <div class="section-row">
-            <div class="section" id="section-17">
-                <h2>NEW SECTION 7</h2>
-            </div>
-            <div class="section" id="section-18">
-                <h2>NEW SECTION 8</h2>
-            </div>
-        </div>
-        <!-- Row 10 -->
-        <div class="section-row">
-            <div class="section" id="section-19">
-                <h2>NEW SECTION 9</h2>
-            </div>
-            <div class="section" id="section-20">
-                <h2>NEW SECTION 10</h2>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-
-
-
-
-
-            <!-- Other Content Sections -->
-            <div id="about-content" class="content-section" style="display: none;">
-                <h1>About Us</h1>
-                <p>Welcome to CivicMind! </p>
-                <p>
-                    We're passionate about making learning the Constitution both engaging and accessible. Our interactive web application is designed to break down the complexities of the Constitution into easy-to-understand segments. Explore the core principles of democracy through simplified readings and fun quizzes. 
-                    Track your progress and celebrate your achievements as you enhance your understanding of this foundational document. Join us on this journey to make constitutional knowledge a breeze!
-                </p>
-                <div class="team">
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 1">
-                        <h3>Anurag Iyer</h3>
-                    </div>
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 2">
-                        <h3>Sanket Kisan Chavhan</h3>
-                    </div>
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 3">
-                        <h3>Himank Khare</h3>
-                    </div>
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 4">
-                        <h3>Lokesh Chakka</h3>
-                    </div>
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 5">
-                        <h3>Pranav Gupta</h3>
-                    </div>
-                    <div class="member">
-                        <img src="../homepage/img/profile-removebg-preview.png" alt="Team Member 6">
-                        <h3>Nidhi Jha</h3>
-                    </div>
-                    <!-- Add more team members as needed -->
-                </div>
-            </div>
-
-            <div id="contact-content" class="content-section" style="display: none;">
-                <h2>Contact</h2>
-                <p>Contact us at contact@civicmind.com.</p>
-            </div>
-
-            <div id="profile-content" class="content-section" style="display: none;">
-                <h2>Profile</h2>
-                <p>Your profile information goes here.</p>
-            </div>
-        </main>
+      </main>
     </div>
 
     <script src="dash.js"></script>
-</body>
-
+  </body>
 </html>

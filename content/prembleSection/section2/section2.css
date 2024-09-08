@@ -24,9 +24,15 @@
 
 
 
+/* Default (light) theme logo */
+.l {
+    content: url('../../../homepage/img/logo.png');
+}
 
-
-
+/* Dark theme logo */
+body.dark .l {
+    content: url('../../../homepage/img/bg-removebg-preview.png'); /* Replace with your dark mode logo image path */
+}
 
 
 
@@ -445,6 +451,12 @@ body{
 .content main .insights li .info p{
     color: var(--dark);
 }
+
+
+
+
+
+
 /* New styles for dashboard sections */
 .dashboard-content {
     margin-bottom: 20px;
@@ -471,7 +483,6 @@ body{
     background-color: #f9f9f9; /* Optional: Adjust background color */
     /* Ensure the sections are visible */
     display: block; 
-    cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     overflow: hidden;
 }
@@ -816,13 +827,18 @@ body{
     height: 70px;
     width: 400px;
 }
+
+#taketest {
+    margin-left: 35%;
+}
+
+
 /* Default light theme styling */
-#centered-heading {
+#centered-heading #theory {
     color: black; /* Default color for light theme */
 }
 /* Dark theme styling */
-body.dark #centered-heading {
+body.dark #centered-heading, body.dark #theory{
     color: white; /* Change the text color to white in dark theme */
 }
-
 
