@@ -30,7 +30,7 @@ submit.addEventListener("click", function (event) {
             // Signed up 
             const user = userCredential.user;
             alert("User created successfully!");
-            window.location.href = "../dashboard/index.html";
+            window.location.href = "../dashboard/dash.html";
         })
         .catch((error) => {
             const errorCode = error.code;
