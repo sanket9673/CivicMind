@@ -18,7 +18,14 @@
             <div class="logo-name"><span>Civic</span>Mind</div>
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="#" data-content="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li id="dash" class="active"><a href="#" data-content="dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+
+            <script>
+                document.getElementById('dash').addEventListener('click',function(){
+                    window.location.href = '../dashboard/dash.html' ;
+                })
+            </script>
+
             <li><a href="#" data-content="about"><i class='bx bx-group'></i>About Us</a></li>
             <li><a href="#" data-content="contact"><i class='bx bxs-phone-call'></i>Contact</a></li>
             <li><a href="#" data-content="profile"><i class='bx bx-group'></i>Profile</a></li>
@@ -62,23 +69,19 @@
             <div id="dashboard-content" class="content-section dashboard-content">
                 <!-- Centered Sections -->
                 <div id="centered-sections" class="centered-sections">
-                    <h2 id="centered-heading">Section Title</h2>
+                    <h2 id="centered-heading" style="font-size: 40px;">Preamble</h2>
                     <div class="section-content">
                         <div class="section" id="section-1">
                             <h3>Section 1</h3>
-                            <p>Content for Section 1.</p>
                         </div>
                         <div class="section" id="section-2">
                             <h3>Section 2</h3>
-                            <p>Content for Section 2.</p>
                         </div>
                         <div class="section" id="section-3">
                             <h3>Section 3</h3>
-                            <p>Content for Section 3.</p>
                         </div>
                         <div class="section" id="section-4">
                             <h3>Section 4</h3>
-                            <p>Content for Section 4.</p>
                         </div>
                     </div>
                 </div>

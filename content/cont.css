@@ -815,3 +815,19 @@ body{
 }
 
 
+
+.section {
+    margin-top: 40px;
+    height: 70px;
+    width: 400px;
+}
+/* Default light theme styling */
+#centered-heading {
+    color: black; /* Default color for light theme */
+}
+/* Dark theme styling */
+body.dark #centered-heading {
+    color: white; /* Change the text color to white in dark theme */
+}
+
+
