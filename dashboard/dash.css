@@ -446,6 +446,67 @@ body{
     color: var(--dark);
 }
 
+
+
+
+
+
+/* New styles for dashboard sections */
+.dashboard-content {
+    margin-bottom: 20px;
+}
+
+.dashboard-sections {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-row {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #1976D2;
+    border-radius: 15px;
+    background-color: #f9f9f9; /* Optional: Adjust background color */
+    /* Ensure the sections are visible */
+    display: block; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden;
+}
+
+/* Hover effect */
+.section:hover{
+    color: black;
+    transform: scale(1.03) translateY(-5px);
+    background-color: #237dd7;
+    box-shadow: 0  0 15px #237dd7;
+}
+
+/* Ensures responsiveness */
+@media (max-width: 768px) {
+    .section-row {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .content main .bottom-data{
     display: flex;
     flex-wrap: wrap;
