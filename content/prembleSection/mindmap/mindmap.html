@@ -7,7 +7,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="cont.css" />
+    <link rel="stylesheet" href="../section1/section1.css" />
     <title>Your Dashboard</title>
   </head>
 
@@ -15,7 +15,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <a href="#" class="logo">
-        <img src="../homepage/img/logo.png" alt="logo" class="l" />
+        <img src="../../../homepage/img/logo.png" alt="logo" class="l" />
         <div class="logo-name"><span>Civic</span>Mind</div>
       </a>
       <ul class="side-menu">
@@ -29,7 +29,7 @@
           document
             .getElementById("dash")
             .addEventListener("click", function () {
-              window.location.href = "../dashboard/dash.html";
+              window.location.href = "../../../dashboard/dash.html";
             });
         </script>
 
@@ -51,7 +51,7 @@
       </ul>
       <ul class="side-menu">
         <li>
-          <a href="../homepage/home.html" class="logout">
+          <a href="../../../homepage/img/logo.png" class="logout">
             <i class="bx bx-log-out-circle"></i>
             Logout
           </a>
@@ -79,7 +79,7 @@
           <i class="bx bx-bell"></i>
         </a>
         <a href="#" class="profile">
-          <img src="../homepage/img/profile-removebg-preview.png" />
+          <img src="../../../homepage/img/profile-removebg-preview.png" />
         </a>
       </nav>
       <!-- End of Navbar -->
@@ -89,60 +89,10 @@
         <div id="dashboard-content" class="content-section dashboard-content">
           <!-- Centered Sections -->
           <div id="centered-sections" class="centered-sections">
-            <h2 id="centered-heading" style="font-size: 40px">Preamble</h2>
-            <div class="section-content">
-              <div class="section" id="section-1" style="height: 90px;">
-                <h3>Justice: Social, Economic, and Political</h3>
-                <script>
-                  document.getElementById("section-1").addEventListener("click", function () {
-                      window.location.href ="prembleSection/section1/section1.html";
-                    });
-                </script>
-              </div>
-              <div class="section" id="section-2" style="height: 90px;">
-                <h3>Liberty: Thought, Expression, Belief, Faith, and Worship</h3>
-                <script>
-                    document.getElementById("section-2").addEventListener("click", function () {
-                        window.location.href ="prembleSection/section2/section2.html";
-                      });
-                  </script>
-              </div>
-              <div class="section" id="section-3" style="height: 70px;">
-                <h3>Equality: Of Status and Opportunity</h3>
-                <script>
-                    document.getElementById("section-3").addEventListener("click", function () {
-                        window.location.href ="prembleSection/section3/section3.html";
-                      });
-                  </script>
-              </div>
-              <div class="section" id="section-4" style="height: 120px;">
-                <h3>Fraternity: Assuring the Dignity of the Individual and the Unity of the Nation</h3>
-                <script>
-                    document.getElementById("section-4").addEventListener("click", function () {
-                        window.location.href ="prembleSection/section4/section4.html";
-                      });
-                  </script>
-              </div>
-
-              <div class="section" id="section-6">
-                <h3>MindMap</h3>
-                <script>
-                    document.getElementById("section-6").addEventListener("click", function () {
-                        window.location.href ="prembleSection/mindmap/mindmap.html";
-                    });
-                </script>
-            </div>
-            
-
-              <div class="section" id="section-5">
-                <h3 >Take Quiz</h3>
-              </div>
-              <script>
-                document.getElementById("section-5").addEventListener("click", function () {
-                    window.location.href ='../../QUIZ/PREAMBLE/FINALquiz/quiz.html';
-                  });
-              </script>
-            </div>
+            <h2 id="centered-heading" style="font-size: 40px">
+              MindMap : Preamble of India
+            </h2>
+            <img src="../../../homepage/img/preamble.png" alt="preamble">
           </div>
         </div>
 
@@ -163,42 +113,42 @@
           <div class="team">
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 1"
               />
               <h3>Anurag Iyer</h3>
             </div>
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 2"
               />
               <h3>Sanket Kisan Chavhan</h3>
             </div>
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 3"
               />
               <h3>Himank Khare</h3>
             </div>
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 4"
               />
               <h3>Lokesh Chakka</h3>
             </div>
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 5"
               />
               <h3>Pranav Gupta</h3>
             </div>
             <div class="member">
               <img
-                src="../homepage/img/profile-removebg-preview.png"
+                src="../../../homepage/img/profile-removebg-preview.png"
                 alt="Team Member 6"
               />
               <h3>Nidhi Jha</h3>
@@ -219,6 +169,6 @@
       </main>
     </div>
 
-    <script src="cont.js"></script>
+    <script src="../section1/section1.js"></script>
   </body>
 </html>

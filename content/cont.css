@@ -476,6 +476,21 @@ body{
     overflow: hidden;
 }
 
+/* Specific styling for section 6 to ensure it is consistent */
+#section-6 h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Centering content in section 6 */
+  #section-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px; /* You can adjust this value as needed */
+  }
+
 /* Hover effect */
 .section:hover{
     color: black;
